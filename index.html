@@ -3,33 +3,73 @@
 	<head>
 		<title>Contacts2XML</title>
 		<meta charset="UTF-8">
-		<link href="css/headers.css" rel="stylesheet" type="text/css">
-		<link href="css/buttons.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link href="css/switches.css" rel="stylesheet" type="text/css">
 		<script src="js/contacts2xml.js" type="text/javascript"></script>
 		<link href="css/contacts2xml.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<section role="region">
-		  <header class="fixed">
-		    <menu type="toolbar">
-		    </menu>
-		    <h1>Contacts2XML</h1>
-		  </header>
-		</section>
-		<article style="padding:10px;text-align:justify">
-			<p>Version 0.4 - with JPG photo export</p>
-			<p>N.B.:</p>
-			<div>
-				<p>This webapp backups all your existing contacts on your SD-card, into the path contacts2xml. It adds a second .bak file for more security with <a href="http://alsatux.com/Cockatoo">Cockatoo</a>, an external editor to manage your Firefox OS contacts&nbsp;!</p>
-				<p style="font-weight:bold">Unplug any USB wire before doing a backup or you won't be able to write on the sd-card&nbsp;!</p>
-				<p>For more security, don't forget to copy all backup files outside of your phone, using the USB capabilities of Firefox OS.</p>
-				<p>To restore your contacts, please use the XML2Contacts webapp.</p>
+		<div id="bg"></div>
+		<header>
+			<h1>Contacts2XML - v.0.6</h1>
+			<p class="news">Add photo management with Cockatoo.</p>		
+		</header>
+		<article>
+			<div id="part1">
+				<div>
+					<p class="warn">Don't forget to unplug USB&nbsp;!</p>
+				</div>
+				<div id="actions">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<label class="pack-switch">
+										<input id="cb1" type="checkbox" checked="checked"/>
+										<span></span>
+									</label>
+								</td>
+								<td style="padding-left:10px"> 
+									Save photos to the XML file<br/>
+									(usefull for Cockatoo) ?
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="pack-switch">
+										<input id="cb2" type="checkbox" checked="checked"/>
+										<span></span>
+									</label>
+								</td>
+								<td style="padding-left:10px">
+									Save photos to external JPG files<br/>
+									(for others programs) ?
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						<button id="but1"><img class="icon" src="/save.png" alt="Save them all !"/>Backup contacts</button>
+					</p>
+				</div>	
+				<div>
+					<p class="warn">N.B.:</p>
+				</div>
+				<div id="cleaner">
+					<ul>
+						<li>JPG photos are saved in the directory <span style="font-weight:bold">sdcard</span>/contacts2xml/YYYYMMDDHHMMSS.</li>
+						<li>You can manage your contacts and photos outside of Firefox OS, using <a href="http://alsatux.com/Cockatoo">Cockatoo</a>&nbsp;!</li>
+						<li>To restore your contacts with photos, use the webapp <span style="font-weight:bold">XML2Contacts</span>.</li>
+						<li>And of course: don't forget to copy your backups outside of your phone&nbsp;!</li>
+					</ul>
+					<br/>
+				</div>
 			</div>
-			<button id="but1" style="margin-top:20px">Backup contacts to SD-Card</button>
-			<br/>
-			<div id="log"></div>
-			<div id="count"></div>
-			<div id="result"></div>
+			<div id="part2">
+				<div id="log"></div>
+				<p class="info" id="count" style="display:none"></p>
+				<p><button id="but2" style="display:none"><img class="icon" src="/back.png" alt="Beatles juice ?">Get back</button></p>
+			</div>
 		</article>
 	</body>
 </html>

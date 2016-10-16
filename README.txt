@@ -1,7 +1,7 @@
-Contacts2XML for Firefox OS - v0.4
+Contacts2XML for Firefox OS - v0.6
 
-Copyright (c) 2013 Jean Luc Biellmann (contact@alsatux.com)
+Copyright (c) 2013-2016 Jean Luc Biellmann (contact@alsatux.com)
 
 Save contacts on the SD-Card of your Firefox OS phone, into the path /contacts2xml.
 
-This program is still under developpement and has been tested on a Geeksphone Peak with Firefox 1.1.
+Thanks to Tango Icon (http://openclipart.org/detail/35431/tango-preferences-system-by-warszawianka).
